@@ -6,29 +6,45 @@
 
 /* the modern way of doing horizontal layouts  */
 
+html, body {
+    height: 100%;
+}
+
 ul {
     display: flex;
     flex-direction: row; /*by default, display: flex has flex direction row*/
     list-style: none;
-    gap: 16px;
+    gap: 1rem;
 }
 
-header, footer {
+header {
     display: flex;
     justify-content: space-between;
 }
 
+main {
+    display: block;
+    text-align: center;
+    unicode-bidi: isolate;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20%;
+}
+
+
 button {
     padding: 0.5rem 1rem;
     background-color: #f8f9fa;
-    border: 1px solid #f8f9fa;
+    border: 0.0625rem solid #f8f9fa;
     color: #3c4043;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 0.25rem;
 }
 
 #climate-message {
     display: flex;
-    gap: 1rem;
-    align-items: center;
+    gap: 1rem; 
 }
