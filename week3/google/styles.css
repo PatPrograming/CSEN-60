@@ -6,8 +6,13 @@
 
 /* the modern way of doing horizontal layouts  */
 
-html, body {
-    height: 100%;
+body {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+    display: grid;
+    grid-template-rows: 1fr 3fr 1 fr;
+    height: 100vh;
 }
 
 ul {
@@ -23,9 +28,7 @@ header {
 }
 
 main {
-    display: block;
-    text-align: center;
-    unicode-bidi: isolate;
+    align-self: center;
 }
 
 footer {
