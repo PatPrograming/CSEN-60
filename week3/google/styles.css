@@ -6,17 +6,19 @@
 
 /* the modern way of doing horizontal layouts  */
 
-
+/*by default, display: flex has flex direction row*/
 ul {
     display: flex;
-    flex-direction: row; /*by default, display: flex has flex direction row*/
+    flex-direction: row; 
     list-style: none;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 header {
     display: flex;
     justify-content: space-between;
+    padding: 0.375rem 1.25rem;
+    width: 100%
 }
 
 main {
@@ -33,7 +35,9 @@ body{
 
 footer {
     display: flex;
+    padding: 0.375rem 1.25rem;
     justify-content: space-between;
+    width: 100%;
 } 
 
 
