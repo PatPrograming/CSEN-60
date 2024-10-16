@@ -1,0 +1,51 @@
+main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: min(80%, 80ch);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+footer nav {
+    background-color: white;
+} 
+
+footer nav a{
+    display: flex;
+    margin-right: 1rem;
+}
+
+button.img{
+    height: 2rem;
+    width: 2rem;
+}
+
+a:-webkit-any-link {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+time {
+    color: var(--darkest-gray);
+}
+
+#next-article {
+    color: var(--accent-background);
+}
+
+nav a.secondary{
+    color: var(--darkest-gray);
+}
+
+header h1{
+    color: var(--accent-background-text);
+}
+
+.highlight{
+    background-color: var(--accent-background);
+}

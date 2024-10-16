@@ -1,0 +1,69 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+body >* {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 50%;
+    flex-flow: column;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+body header{
+    margin-right: 35rem;
+}
+
+article {
+    margin: auto;
+}
+
+aside{
+    background-color: var(--accent-background);
+    max-width: 35rem;
+}
+
+aside h1{
+    text-align: center;
+}
+
+time {
+    color: var(--darkest-gray);
+}
+
+header h1{
+    color: var(--accent-background-text);
+}
+
+#link1 {
+    color: var(--accent-background);
+}
+
+aside ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-content: center;
+    margin-right: 3rem;
+}
+
+#profile  {
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 25%;
+    justify-content: center;
+}
+
+nav {
+    background-color: white;
+    align-self: flex-end;
+}
+
+figcaption > p {
+    text-align: center;
+}
