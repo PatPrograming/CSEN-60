@@ -11,7 +11,7 @@ function addTodo() {
 
     const ul = document.querySelector("ul")
     // const list = lists[0]
-    console.log(list)
+    console.log(ul)
 
     const li = document.createElement("li")
     li.textContent = input.value
