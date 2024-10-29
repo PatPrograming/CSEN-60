@@ -6,7 +6,9 @@ let parentElement = null;
 const tagLists = Array.from(document.querySelectorAll("article .tags"));
 
 // Search Functions
-
+/**  
+ * initializeSearch function checks the newParentElement, looking at if its empty/null. If so, it returns a console.error message which specifies the parent elemnt is null and tags can't be insterted.
+*/
 function initializeSearch(newParentElement) {
   const params = new URLSearchParams(window.location.search);
   if (newParentElement === null) {
@@ -21,9 +23,12 @@ function initializeSearch(newParentElement) {
   for (const tag of params.getAll("tag")) {
     addSearchTerm(tag);
   }
+  console.log("InitilaizeSearch")
 }
 
-
+/**
+ * The hideArticles function checks the searchTags length. If the length is 0, it iterates in a for loop through the article array and removes all hidden elements. Its purpose is to show and hide tags which are specified by the user.
+ */
 function hideArticles() {
   if (searchTags.length === 0) {
     for (const article of document.querySelectorAll("article")) {
@@ -45,6 +50,15 @@ function hideArticles() {
    * else, remove "hidden" from that article's classList
    */
   // write your code here
+  for (const article of document.querySelectorAll("article")) {
+    if (!articlesWithTags.includes(article)) {
+      article.classList.add("hidden");
+    }
+    else {
+      article.classList.remove("hidden");
+    }
+  }
+  console.log("HideArticles")
 }
 
 /**
@@ -59,7 +73,13 @@ function createTag(text) {
    * set the button's textContent property to text (the passed in argument)
    */
   // write your code here
+  const button = document.createElement("button")
+  button.classList.add("tag")
+  button.textContent = text 
 
+/**
+ * The remove function is in charge of removing tags which are clicked. In the event that a tag is clicked post search, it is removed and all the corresponding results with that tag disappear.
+ */
   function remove() {
     button.remove();
     const index = searchTags.indexOf(text);
@@ -68,6 +88,7 @@ function createTag(text) {
     }
 
     hideArticles();
+    console.log("Remove")
   }
 
   /**
@@ -75,8 +96,13 @@ function createTag(text) {
    * return the button element 
    */
   // write your code here
+  button.addEventListener("click", remove);
+  console.log("CreateTag")
+  return button;
 }
-
+/**
+ * The findArticlesWithTag function looks for the articles which have the tag specified in the search, which are then displayed solely on the screen. It also allows the user to get results from the lowercase version of the tag.
+ */
 function findArticlesWithTag(phrase) {
   const articles = [];
   const sanitizedPhrase = phrase.toLowerCase().trim();
@@ -89,19 +115,24 @@ function findArticlesWithTag(phrase) {
       }
     }
   }
-
+  console.log("FindArticlesWithTag")
   return articles;
 }
 
-
+/**
+ * The addSearchTerm function creates the tag which is displayed on the page and hides the articles which do not have the tag.
+ */
 function addSearchTerm(text) {
   parentElement.appendChild(createTag(text));
   searchTags.push(text);
   hideArticles();
+  console.log("AddSearchTerm")
 }
 
 // Handlers
-
+/**
+ * The onSearch function checks for the user to press the enter key and then adds the tag as an input which is tho be searched for.
+ */
 function onSearch(event) {
   const input = event.currentTarget;
   /**
@@ -110,16 +141,24 @@ function onSearch(event) {
    * set input value to an empty string
    */
   // write your code here
+  if (event.key === "Enter") {
+    addSearchTerm(input.value);
+    input.value = "";
+  }
+  console.log("OnSearch")
 }
 
 // Main function
-
+/**
+ * The main function initializes the search functionality by setting up tag container and search input container.
+ */
 function main() {
   initializeSearch(document.querySelector("#searched-tags"));
 
   document
     .querySelector("input[type=search]")
     .addEventListener("keypress", onSearch);
+    console.log("Main")
 }
 
 // Execute main function
@@ -127,7 +166,7 @@ main();
 
 /**
  * Order of execution for each event:
- * Pressing Enter: 
- * Clicking to Remove a Tag: 
- * Loading the Page: 
+ * Pressing Enter: onSearch() -> addSearchTerm() -> hideArticles() -> findArticlesWithTag() -> createTag()
+ * Clicking to Remove a Tag: remove()
+ * Loading the Page:  main() -> initializeSearch() 
  */
