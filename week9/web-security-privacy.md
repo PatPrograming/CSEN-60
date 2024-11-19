@@ -116,11 +116,11 @@ freely
 
 Specify what an application can do with the
 information
-– Use in the application only
-– Use in the application and the owning company
-– Use in the application, owning company, affiliates
-– Share (sell to) with related businesses
-– Share (sell to) with anyone
-• Specify which controls you have over the information
-– Can you stop it from being collected
-– Can you request any collected information be discarded
+- Use in the application only
+- Use in the application and the owning company
+- Use in the application, owning company, affiliates
+- Share (sell to) with related businesses
+- Share (sell to) with anyone
+    - Specify which controls you have over the information
+- Can you stop it from being collected
+- Can you request any collected information be discarded
