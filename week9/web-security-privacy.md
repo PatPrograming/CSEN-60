@@ -88,34 +88,31 @@ Response:
     - The encryption/decryption process requires an algorithm and a key.
 
 ## Privacy 
-Privacy Policy
+### Privacy Policy
 
-• Statement saying what the web site does with
-any information it collects
-– Or otherwise obtains from the user
-– And why the web site needs this information
-• Generally considered legally binding
-– Must obey the laws of the land
-– Different lands have different laws
-• Written in dense legal language
-• Users may or may not pay attention
+- Statement saying what the web site does with any information it collects
+- Or otherwise obtains from the user
+- And why the web site needs this information
+    - Generally considered legally binding
+- Must obey the laws of the land
+- Different lands have different laws
+    - Written in dense legal language
+    - Users may or may not pay attention
 
-The Role of a Privacy Policy
+### The Role of a Privacy Policy
 
-• Delineate what types of information are collected
-– Whether that information is used immediately or
+- Delineate what types of information are collected
+- Whether that information is used immediately or
 saved
 
-• Specify why the information is needed
-– Not always done
-– Useful if the application is not obvious
-• Specify who owns the information
-– If you own your information, company can’t use it
-freely
-– If they own the information things are more flexible
+- Specify why the information is needed
+- Not always done
+- Useful if the application is not obvious
+- Specify who owns the information
+- If you own your information, company can’t use it freely
+- If they own the information things are more flexible
 
-Specify what an application can do with the
-information
+### Specify what an application can do with the information
 - Use in the application only
 - Use in the application and the owning company
 - Use in the application, owning company, affiliates
@@ -124,3 +121,93 @@ information
     - Specify which controls you have over the information
 - Can you stop it from being collected
 - Can you request any collected information be discarded
+
+### Digital Certificate
+- Form an asymmetric key
+- Also contains information about the certificate, the holder of the certificate, and the issuer of the certificate.
+- Used by SSL (Secure Socket Layer) to auth the identify of the web server
+
+- Contents of a server's digital certificate include:
+    - The public key
+    - Effective date of the certificate
+    - Expiration date of the certificate
+    - Details about the certificate authority: issuer of the certificate
+    - Details about the certificate holder
+    - A digest of the certificate context
+
+### Cerficate Authority
+- Trusted third party org which certifies a web server with a digital certificate
+
+- Well known
+    - IdenTrust
+    - DigiCert
+    - GTS
+
+### Data Collection
+- Social Networks
+- Online Shopping
+- Online finances
+
+### Mobile OS-provided
+- Contacts
+- Photos
+- Location
+
+### Cookies
+- A cookie is a name value pair created by a website to store information on your computer
+- Why?
+    - user Auth
+    - Site preferences
+    - Contents of shopping carts
+
+### Behavior Logging
+- Any action a user takes on a webpage can be logged
+- HTML event listeners!
+    - Clicks
+    - Hovers
+- Time between actions
+    - How long you spend looking at a post
+    - Did you skip an ad? At what point in the ad?
+
+### Data Applications: Ad Tracking
+- How are all these porducts free?
+    - Facebook/Twitter/LinkedIn
+    - Google
+    - YouTube / Soundcloud
+- Goal: convert an ad seen on screen to some action
+- The better targeted the ad, the better chance of a conversion ($$$)
+
+### Drive a metric
+- Optimize a webpage's behavior for something that can be quantitatively measured 
+- Iterative UI imporvements
+- A/B Testing
+
+### Lots osf Sensitive Information
+- Personally identifiable information - PII
+- Financial information
+- Legally sensitive
+    - HIPPS Health
+    - FERPA Students
+    - COPPA Kids
+
+### Privacy Policy
+- Statment saying what the web site does with any information it collects
+
+### Developer - Legal Responsibility
+- Privacy has legal implications
+    - European law is generally much stricter than US
+    - China has policy of censorship
+- Developer is responsible for breaches of policy
+
+### GDPR
+- General Data protection Regulation
+- Protects citizens of the European Union
+- Users must provide consent
+- Must collect minimum amount of data to acheive stated purpose
+- Consumers may view data
+
+### CCPA
+- California Consumer Privacy Act
+- Similar to, less strict that GDPR
+    - Opt-out vs. Consent
+    - "Do not sell my personal data"
